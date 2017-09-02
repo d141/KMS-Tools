@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Personalize</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="text/javascript">
+	
+      function draw(){
+	  	var lines = document.getElementById('text').value.split('\n');
+		
+		for (var i=0;i<lines.length;i++){
+		var line=lines[i];
+		var param = "converter"+i;
+        var canvas = document.getElementById(param);
+        if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+		  ctx.fillStyle= 'green';
+  		  ctx.font = font.value;
+  		  ctx.fillText(line,10,50);
+          }
+		}
+      }
+	  
+	 function build() {
+	 var lines = document.getElementById('text').value.split('\n');
+	 var div = document.getElementById('canvas');
+	 var html = '';
+	 for(var i=0;i<lines.length;i++){
+     div.innerHTML+='<canvas id="converter'+i+'" style="background-color:black" width="200" height="80"></canvas><br>';
+		}
+	}
+	
+	
+    </script>
+    <style type="text/css">
+      canvas { border: 1px solid black; }
+	  
+	  @font-face {
+    font-family: 'college';
+    src: url(fonts/collegeb.ttf);
+	}
+    </style>
+  </head>
+  <body>
+  <h1 style="font-family:college; color:#33ccff;font-size:60px">
+  	  <img src="http://logoknits.com/images/logo-knits/kmsco.png">
+  	  Personalize
+  </h1>
+  	Font<input type="text" id="font"><br>
+  	Text<textarea rows="4" cols="50" id="text"></textarea><br>
+	<input type="button" value="Build" onClick='build();'><br>
+	<input type="button" value="Print" onClick='draw();'><br>
+	<div id="canvas">
+	
+	</div>
+	<div class="navbar navbar-fixed-bottom text-right">
+	<a href="../index.html" title="Back to the Home page"><b>Go back to home page</b></a><br>
+    Brought to you by D_VA
+  </body>
+</html>
