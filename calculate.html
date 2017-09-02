@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Sun, 15 May 2016 10:51:36 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Stitch Count</title>
+    <!--
+    body {
+      color:#000000;
+      background-color:#FFFFFF;
+      background-image:url('Background Image');
+      background-repeat:no-repeat;
+    }
+    a  { color:#0000FF; }
+    a:visited { color:#800080; }
+    a:hover { color:#008000; }
+    a:active { color:#FF0000; }
+    -->
+    </style>
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    </style>
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<script src="/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+	  function multiply(colors,lines)
+{
+	var total;
+	if (colors>=3&&colors<=8)
+	{
+	if (colors == 3)
+	{
+		return total = +((lines*1).toFixed(2));
+	}
+	else if (colors == 4)
+	{
+		return total = +((lines*1.06).toFixed(2));
+	}
+	else if (colors == 5)
+	{
+		return total = +((lines*1.12).toFixed(2));
+	}
+	else if (colors == 6)
+	{
+		return total = +((lines*1.18).toFixed(2));
+	}
+	else if (colors == 7)
+	{
+		return total = +((lines*1.24).toFixed(2));
+	}
+	else if (colors == 8)
+	{
+		return total = +((lines*1.31).toFixed(2));
+	}
+	}
+	else
+	{
+	  return total = 0;
+	}
+}
+	</script>
+	<script src="/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  <body>
+
+  <h1 style="color:#33ccff">
+    <img src="http://logoknits.com/images/logo-knits/kmsco.png">
+  	  Stitch Calculator v3.0
+	  </h1>
+
+	  <form method = "POST" id="table" >
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+  # of colors:<br>
+  <input type="number" name="colors1"><br>
+   # of colors:<br>
+  <input type="number" name="colors2"><br>
+   # of colors:<br>
+  <input type="number" name="colors3"><br>
+   # of colors:<br>
+  <input type="number" name="colors4"><br>
+   # of colors:<br>
+  <input type="number" name="colors5"><br>
+   # of colors:<br>
+  <input type="number" name="colors6"><br>
+    # of colors:<br>
+  <input type="number" name="colors7"><br>
+     # of colors:<br>
+  <input type="number" name="colors8"><br>
+       # of colors:<br>
+  <input type="number" name="colors9"><br>
+       # of colors:<br>
+  <input type="number" name="colors10"><br>
+       # of colors:<br>
+  <input type="number" name="colors11"><br>
+       # of colors:<br>
+  <input type="number" name="colors12"><br>
+       # of colors:<br>
+  <input type="number" name="colors13"><br>
+       # of colors:<br>
+  <input type="number" name="colors14"><br>
+       # of colors:<br>
+  <input type="number" name="colors15"><br>
+    </div>
+    <div class="col-sm-4">
+      # of lines:<br>
+  <input type="number" name="lines1"><br>
+  # of lines:<br>
+  <input type="number" name="lines2"><br>
+  # of lines:<br>
+  <input type="number" name="lines3"><br>
+  # of lines:<br>
+  <input type="number" name="lines4"><br>
+  # of lines:<br>
+  <input type="number" name="lines5"><br>
+  # of lines:<br>
+  <input type="number" name="lines6"><br>
+  # of lines:<br>
+  <input type="number" name="lines7"><br>
+  # of lines:<br>
+  <input type="number" name="lines8"><br>
+    # of lines:<br>
+  <input type="number" name="lines9"><br>
+    # of lines:<br>
+  <input type="number" name="lines10"><br>
+    # of lines:<br>
+  <input type="number" name="lines11"><br>
+    # of lines:<br>
+  <input type="number" name="lines12"><br>
+    # of lines:<br>
+  <input type="number" name="lines13"><br>
+    # of lines:<br>
+  <input type="number" name="lines14"><br>
+    # of lines:<br>
+  <input type="number" name="lines15"><br>
+    </div>
+  </div>
+</div>
+<br>
+  <div class="col-md-12 text-center"> 
+  <button style="background-color:#e7e7e7; color:black; font-size:24px" type="button" value="Submit" onclick = "total.value=multiply(colors1.value,lines1.value) + multiply(colors2.value,lines2.value) + 
+  multiply(colors3.value,lines3.value) + multiply(colors4.value,lines4.value) + multiply(colors5.value,lines5.value) + multiply(colors6.value,lines6.value) + 
+  multiply(colors7.value,lines7.value) + multiply(colors8.value,lines8.value) + multiply(colors9.value,lines9.value) + multiply(colors10.value,lines10.value) + 
+  multiply(colors11.value,lines11.value) + multiply(colors12.value,lines12.value) + multiply(colors13.value,lines13.value) + multiply(colors14.value,lines14.value) + multiply(colors15.value,lines15.value);">Submit!</button>
+  </div>
+<br>
+	  <div class="col-md-12 text-center">
+	   <button style="background-color:#e7e7e7; color:black; font-size:24px" type="button" value="Reset" onclick = 'document.getElementById("table").reset();'>Reset</button>
+	   </div><br>
+</form>
+
+<div class="col-sm-3">
+  <h1>
+ Your total is:<output type="number" name="total" id="total"><br>
+   </h1>
+   </div>
+   
+    <div class="navbar navbar-fixed-bottom text-right">
+	<a href="../index.html" title="Back to the Home page"><b>Go back to home page</b></a><br>
+    Brought to you by D_VA
+  </body>
+</html>
